@@ -109,7 +109,7 @@ def main() -> None:
             tooltip_lines.append("  نوروز مبارک!")
         elif nd == 1:
             tooltip_lines.append("  فردا نوروز")
-        elif nd < 100:
+        else:
             tooltip_lines.append(
                 f"  {to_persian_digits(str(nd))} روز تا نوروز"
             )
