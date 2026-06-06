@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "waybar-jalaly-calendar"
+version = "1.0.0"
+description = "Jalali (Persian/Solar Hijri) calendar module for Waybar"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "GPL-3.0-or-later" }
+keywords = ["waybar", "sway", "persian-calendar", "jalali", "hijri"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Desktop Environment :: Window Managers",
+]
+dependencies = ["jdatetime>=3.8", "hijridate>=1.0"]
+
+[project.urls]
+Homepage = "https://github.com/sunba91-su/waybar-jalaly-calendar"
+Repository = "https://github.com/sunba91-su/waybar-jalaly-calendar"
+
+[project.scripts]
+waybar-jalaly-calendar = "waybar_jalaly_calendar.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
